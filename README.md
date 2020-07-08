@@ -35,9 +35,9 @@ Things you may want to cover:
 |remember_created_at|datetime||
 
 ### Association
-- has_many :groups, through: members
+- has_many :groups, through: groups_users
+- has_many :messages
 - has_many :groups_users
-- has_many :members
 
 
 ## groups table
@@ -48,8 +48,8 @@ Things you may want to cover:
 
 ### Association
 - has_many :users, through: members
+- has_many :messages
 - has_many :groups_users
-- has_many :members
 
 ## groups_users table
 |Column|Type|Options|
