@@ -51,7 +51,7 @@ Things you may want to cover:
 - has_many :messages
 - has_many :groups_users
 
-## groups_users table
+## messages table
 |Column|Type|Options|
 |------|----|-------|
 |body|string|null:false|
