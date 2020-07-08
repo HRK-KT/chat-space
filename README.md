@@ -47,7 +47,7 @@ Things you may want to cover:
 |name|string|null:false,unique:true|
 
 ### Association
-- has_many :users, through: members
+- has_many :users, through: groups_users
 - has_many :messages
 - has_many :groups_users
 
@@ -65,8 +65,8 @@ Things you may want to cover:
 ## groups_users table
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer||
-|group_id|integer||
+|user_id|integer|foreign_key: true, null: false|
+|group_id|integer|foreign_key: true, null: false|
 
 ### Association
 - belongs_to :user
