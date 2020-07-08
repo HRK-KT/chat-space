@@ -54,8 +54,9 @@ Things you may want to cover:
 ## messages table
 |Column|Type|Options|
 |------|----|-------|
-|body|string|null:false|
-|groups_users_id|integer||
+|body|string||
+|group_id|integer|foreign_key: true, null: false|
+|user_id|integer|foreign_key: true, null: false|
 |image|string||
 
 ### Association
