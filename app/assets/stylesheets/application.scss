@@ -45,6 +45,23 @@
   }
 }
 
+.Group-contents {
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0px 20px;
+  
+  &__name {
+    font-size: 15px;
+    padding-top:20px;
+  }
+
+  &__comment {
+    font-size: 11px;
+    padding: 5px 0px 40px 0px;
+  }
+}
+
+
 .Chat-main {
   width: calc(100vw - 300px);
   &__group-info {
