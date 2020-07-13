@@ -2,3 +2,15 @@
 @import "modules/messages";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+.Side-bar {
+  height: 100vh;
+  width: 300px;
+  background-color: #253141;
+}
+
+.Chat-main {
+  height: 100vh;
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+}
