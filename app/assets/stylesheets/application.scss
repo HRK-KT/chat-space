@@ -3,14 +3,36 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-.Side-bar {
+.wrapper {
   height: 100vh;
+  display: flex;
+}
+
+.Side-bar {
   width: 300px;
-  background-color: #253141;
+  &__user-name {
+    height: 100px;
+    background-color: #253141;
+  }
+  &__group-list {
+    height: calc(100vh - 100px);
+    background-color: #2F3e51;
+  }
 }
 
 .Chat-main {
-  height: 100vh;
   width: calc(100vw - 300px);
-  background-color: #ffffff;
+  &__group-info {
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+  }
+  &__message-list {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+  }
+  &__message-form {
+    height: 90px;
+    background-color: #d2d2d2;
+  }  
 }
