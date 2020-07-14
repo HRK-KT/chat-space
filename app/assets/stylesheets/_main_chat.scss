@@ -34,7 +34,6 @@
 
 .Edit-btn {
   font-size: 16px;
-  color: #38aef0;
   border: 1px solid #38aef0;
   width: 72px;
   height: 40px;
@@ -42,4 +41,10 @@
   padding: 0px 20px;
   display: flex;
   align-items: center;
+
+}
+
+a {
+  text-decoration: none;
+  color: #38aef0;
 }
