@@ -1,0 +1,45 @@
+
+.Chat-main {
+  width: calc(100vw - 300px);
+  &__group-info {
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__message-list {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+  }
+  &__message-form {
+    height: 90px;
+    background-color: #d2d2d2;
+  }  
+}
+
+.Group-top {
+  align-items: center;
+  margin-left: 40px;
+  &__name {
+    margin: 35px 0px 15px 0px;
+    font-size: 20px;
+    color: #333333
+  }
+  &__member{
+    font-size: 12px;
+    color: #999999;
+  }   
+}
+
+.Edit-btn {
+  font-size: 16px;
+  color: #38aef0;
+  border: 1px solid #38aef0;
+  width: 72px;
+  height: 40px;
+  margin: 28px 40px 0px 0px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+}
