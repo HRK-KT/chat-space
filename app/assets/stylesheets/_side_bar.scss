@@ -1,3 +1,8 @@
+@mixin default-font {
+  font-weight: bold;
+  color: #ffffff;
+}
+
 .Side-bar {
   width: 300px;
   &__user-name {
@@ -13,11 +18,10 @@
 }
 
 .Top-items {
-  margin: 0px 20px;
+  @include default-font;
   height: 20px;
   width: 260px;
-  font-weight: bold;
-  color: #ffffff;
+  margin: 0px 20px;
   display: flex;
   justify-content: space-between;
   &__name {
@@ -26,18 +30,16 @@
 
   &__icons {
     width: 60px;
-    text-align: right;
   }
 
   &__btn {
+    color:#ffffff;
     margin-left: 5px;
-    color:#ffffff
   }
 }
 
 .Group-contents {
-  color: #ffffff;
-  font-weight: bold;
+  @include default-font;
   margin: 0px 20px;
   
   &__name {
