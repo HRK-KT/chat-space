@@ -1,0 +1,36 @@
+.Chat-main
+  .Chat-main__group-info
+    .Group-top
+      .Group-top__name
+        test
+      .Group-top__member
+        Member: masa
+    .Edit-btn
+      =link_to "#" do
+        edit
+
+  .Chat-main__message-list
+    .Message-info
+      .Message-info__user
+        masa
+      .Message-info__date
+        2020/7/14(tue) 16:11:00
+    .Message-body
+      おはよう！
+    .Message-info
+      .Message-info__user
+        masa2
+      .Message-info__date
+        2020/7/14(tue) 16:21:00
+    .Message-body
+      おはよう！！
+  .Chat-main__message-form
+    .Container-box 
+      .Input-box
+        %label{class: "Input-box__image"}
+          = icon('fas fa-2x', 'image')
+          %input{type: "file", class: "Input-box__send"}
+      .Message-box
+        %input{type: "text", placeholder: "type a message" ,class: "Message-box__text"}   
+    .Send-btn
+      %input{type: "submit", class: "Message-btn", value:'Send'}
