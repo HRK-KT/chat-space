@@ -4,7 +4,7 @@
       .Top-items__name
         =current_user.name
       .Top-items__icons
-        =link_to "#" ,class: "Top-items__btn" do
+        =link_to new_group_path ,class: "Top-items__btn" do
           =icon('far', 'edit')
         =link_to edit_user_path(current_user) ,class: "Top-items__btn" do
           =icon('fas', 'cog')
