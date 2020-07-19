@@ -31,4 +31,4 @@ yarn-debug.log*
 .yarn-integrity
 
 # 記述追加(カリキュラム〜実装に入るための準備〜）
-public/uploads/*
+public/uploads/*.DS_Store
