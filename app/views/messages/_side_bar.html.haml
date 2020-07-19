@@ -10,16 +10,11 @@
           =icon('fas', 'cog')
 
   .Side-bar__group-list
-    .Group-contents
-      .Group-contents__name
-        techcamp
-      .Group-contents__comment
-        まだメッセージがありません
-      .Group-contents__name
-        techcamp2
-      .Group-contents__comment
-        まだメッセージがないということではないのかもしれないということではなくない
-      .Group-contents__name
-        hyper_techcamp
-      .Group-contents__comment
-        ちょうど勉強しようと思っていたところだ・・・
+    - current_user.groups.each do |group|
+      .Group-contents
+        = link_to '#' do
+          .Group-contents__name
+            = group.name
+          .Group-contents__comment
+            まだメッセージがありません
+    
