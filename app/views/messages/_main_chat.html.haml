@@ -2,9 +2,12 @@
   .Chat-main__group-info
     .Group-top
       .Group-top__name
-        test
+        = @group.name
       .Group-top__member
-        Member: masa
+        Member:
+        %ul.member-list
+          - @group.users.each do |user|
+            %li.member= user.name
     .Edit-btn
       =link_to "#" do
         edit
