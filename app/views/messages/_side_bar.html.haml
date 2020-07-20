@@ -12,9 +12,9 @@
   .Side-bar__group-list
     - current_user.groups.each do |group|
       .Group-contents
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .Group-contents__name
             = group.name
           .Group-contents__comment
-            まだメッセージがありません
+            = group.show_last_message
     
