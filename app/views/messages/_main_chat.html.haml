@@ -31,7 +31,7 @@
         = f.label :image, class: 'Form__inputBox' do
           = icon('far fa-2x', 'image', class:'Form__inputBoxImage')
           = f.file_field :image, class:'Form__inputBoxSend'
-        = f.text_field :content, class: "Form__messageBox", placeholder: 'type a message'
+        = f.text_field :body, class: "Form__messageBox", placeholder: 'type a message'
       = f.submit 'Send', class: 'Form__sendBtn'
     -# .Container-box 
     -#   .Input-box
