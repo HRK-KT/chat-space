@@ -2,41 +2,37 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html = 
-        `<div class="Chat-main__message-list">
-          <div class="Message-info">
-            <div class="Message-info__user">
-              ${message.user_name}
-            </div>
-            <div class="Message-info__date">
-              ${message.created_at}
-            </div>
-          </div>
-          <div class="Message-body">
-            <p class="Message-content">
-              ${message.body}
-            </p>
-            <img class="Message-image" src="${message.image}">
-          </div>
-        </div>`
-        return html;
+     `<div class="Message-info">
+        <div class="Message-info__user">
+          ${message.user_name}
+        </div>
+        <div class="Message-info__date">
+          ${message.created_at}
+        </div>
+        </div>
+      <div class="Message-body">
+        <p class="Message-content">
+          ${message.body}
+        </p>
+        <img class="Message-image" src="${message.image}">
+      </div>`
+      return html;
   } else {
       let html =
-        `<div class="Chat-main__message-list">
-          <div class="Message-info">
-            <div class="Message-info__user">
-              ${message.user_name}
-            </div>
-            <div class="Message-info__date">
-              ${message.created_at}
-            </div>
-          </div>
-          <div class="Message-body">
-            <p class="Message-content">
-              ${message.body}
-            </p>
-          </div>
-        </div>`
-        return html;
+     `<div class="Message-info">
+        <div class="Message-info__user">
+          ${message.user_name}
+        </div>
+        <div class="Message-info__date">
+          ${message.created_at}
+        </div>
+      </div>
+      <div class="Message-body">
+        <p class="Message-content">
+          ${message.body}
+        </p>
+      </div>`
+      return html;
   };
 }
 
@@ -54,6 +50,8 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
+      $('.Chat-main__message-list').append(html);
+      $('form')[0].reset();
     })
   });
 });
