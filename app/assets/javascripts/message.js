@@ -2,12 +2,12 @@ $(function(){
   $('.Form').on('submit', function(e){
     e.preventDefault();
     let formData = new FormData(this);
-    let url = $(this).attr('action');
+    let url = $(this).attr('action')
     $.ajax({
       url: url,
-      type: "POST"
+      type: "POST",
       data: formData,
-      dataType: 'json'
+      dataType: 'json',
       processData: false,
       contentType: false
     })
