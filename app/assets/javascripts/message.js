@@ -55,5 +55,8 @@ $(function(){
       $('form')[0].reset();
       $('.Form__sendBtn').removeAttr("disabled");
     })
+    .fail(function() {
+      alert("メッセージ送信に失敗しました");
+    });
   });
 });
