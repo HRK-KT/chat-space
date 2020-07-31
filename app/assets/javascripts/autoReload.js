@@ -10,13 +10,14 @@ $(function(){
           <div class="Message-info__date">
             ${message.created_at}
           </div>
-          </div>
+        </div>
         <div class="Message-body">
           <p class="Message-content">
             ${message.body}
           </p>
           <img class="Message-image" src="${message.image}">
-        </div>`
+        </div>  
+       </div>`
         return html;
   } else {
       let html =
@@ -33,34 +34,11 @@ $(function(){
           <p class="Message-content">
             ${message.body}
           </p>
+        </div>
       </div>`
       return html;
   };
 }
-
-  $('.Form').on('submit', function(e){
-    e.preventDefault();
-    let formData = new FormData(this);
-    let url = $(this).attr('action')
-    $.ajax({
-      url: url,
-      type: "POST",
-      data: formData,
-      dataType: 'json',
-      processData: false,
-      contentType: false
-    })
-    .done(function(data){
-      let html = buildHTML(data);
-      $('.Chat-main__message-list').append(html);
-      $('.Chat-main__message-list').animate({ scrollTop: $('.Chat-main__message-list')[0].scrollHeight});
-      $('form')[0].reset();
-      $('.Form__sendBtn').removeAttr("disabled");
-    })
-    .fail(function() {
-      alert("メッセージ送信に失敗しました");
-    });
-  });
 
   let reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
@@ -75,8 +53,8 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-       // 更新するメッセージがなかった場合は.doneの後の処理が動かないようにする
-       if (messages.length !== 0) {
+      // 更新するメッセージがなかった場合は.doneの後の処理が動かないようにする
+      if (messages.length !== 0) {
         //追加するHTMLの入れ物を作る
         let insertHTML = '';
         //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
@@ -84,7 +62,8 @@ $(function(){
           insertHTML += buildHTML(message)
         });
         //メッセージが入ったHTMLに、入れ物ごと追加
-        $('.MessageField').append(insertHTML);
+        $('.Chat-main__message-list').append(insertHTML);
+        $('.Chat-main__message-list').animate({ scrollTop: $('.Chat-main__message-list')[0].scrollHeight});
       }
     })
     .fail(function() {
